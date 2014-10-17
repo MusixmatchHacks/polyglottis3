@@ -103,6 +103,7 @@ function addTracksToPlaylist(playlist_name, tracks)
 		playlist_uri += '/tracks';
 		//var thisTracks = tracks.slice(start, start + maxTracksPerPlaylistAdd);
 		track_uris = tracks.map(function(track){return 'spotify:track:'+ track })
+        console.log(track_uris)
 		console.log(JSON.stringify(track_uris))
     	return new Promise(function(resolve,reject){
     			$.ajax(playlist_uri, {
