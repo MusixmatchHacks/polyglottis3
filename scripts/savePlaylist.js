@@ -119,8 +119,8 @@ function addTracksToPlaylist(playlist_name, tracks)
 		    	},
 		    	error: function(r, status, err) {
 
-                console.log('err')
-                console.log('status')
+                console.log(err)
+                console.log(status)
                 reject()
 		    	// resolve(playlist_uri)
 		    	}
