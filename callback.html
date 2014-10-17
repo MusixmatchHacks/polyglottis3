@@ -108,6 +108,7 @@ function pageLoad()
   playlist_name = localStorage.getItem('playlist-name');
   track_ids = JSON.parse(localStorage.getItem('track_ids'));
   console.log(playlist_name)
+  console.log(track_ids)
   addTracksToPlaylist(playlist_name,track_ids).then(function(result)
   {
     console.log('asd')
