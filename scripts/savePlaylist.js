@@ -4,9 +4,9 @@ var g_tracks = [];
 var g_artist = '';
 
 function loginWithSpotify() {
-   var client_id = '0e343327e0cd4e2694f746ba7789f373';
+   var client_id = '0020790015d449c6ae1aacc4a1e8546d';
    //var redirect_uri = 'http://localhost:8884/callback.html';
-   var redirect_uri = 'http://lab.musixmatch.com/polyglottis/callback.html';
+   var redirect_uri = 'http://lab.musixmatch.com/polyglottis3/callback.html';
    var url = 'https://accounts.spotify.com/authorize?client_id=' + client_id +
        '&response_type=token' +
        '&scope=playlist-modify-private' +
