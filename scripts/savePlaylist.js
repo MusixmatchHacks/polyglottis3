@@ -100,7 +100,7 @@ function addTracksToPlaylist(playlist_name, tracks)
 {
 	return createPlaylist(playlist_name).then(function(playlist_uri){
 		//var maxTracksPerPlaylistAdd = 100;
-		playlist_uri += '/tracks?uris=';
+		playlist_uri += '/tracks';
 		//var thisTracks = tracks.slice(start, start + maxTracksPerPlaylistAdd);
 		track_uris = tracks.map(function(track){return 'spotify:track:'+ track })
 		console.log(JSON.stringify(track_uris))
@@ -118,7 +118,7 @@ function addTracksToPlaylist(playlist_name, tracks)
 		        resolve(playlist_uri)	
 		    	},
 		    	error: function(r, status, err) {
-
+                console.log(g_access_token)    
                 console.log(err)
                 console.log(status)
                 reject()
