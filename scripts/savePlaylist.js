@@ -129,6 +129,7 @@ function addTracksToPlaylist(playlist_name, tracks)
 		    	//callback(null);
 		    	//console.log(status)
 		    	//console.log(playlist_uri)
+                console.log('PROBLEM')
 		    	resolve(playlist_uri)
 		    	}
 			});
