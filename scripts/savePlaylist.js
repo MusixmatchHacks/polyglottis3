@@ -100,16 +100,22 @@ function addTracksToPlaylist(playlist_name, tracks)
 {
 	return createPlaylist(playlist_name).then(function(playlist_uri){
 		//var maxTracksPerPlaylistAdd = 100;
-		playlist_uri += '/tracks';
+		playlist_uri += '/tracks?uris=';
 		//var thisTracks = tracks.slice(start, start + maxTracksPerPlaylistAdd);
 		track_uris = tracks.map(function(track){return 'spotify:track:'+ track })
-        console.log(track_uris)
-		console.log(JSON.stringify(track_uris))
+        
+        for (var i = 0; i < track_uris.length - 1; i++) {
+            playlist_uri += track_uris[i] + ','
+        };
+        playlist_uri += track_uris[track_uris.length - 1]
+        
+        console.log(playlist_uri)
+		// console.log(JSON.stringify(track_uris))
     	return new Promise(function(resolve,reject){
     			$.ajax(playlist_uri, {
 				type: 'POST',
-		    	data: JSON.stringify(track_uris),
-		    	dataType: 'json',
+		    	// data: JSON.stringify(track_uris),
+		    	// dataType: 'json',
 				//processData:true,
 		    	headers: {
 		        	'Authorization': 'Bearer ' + g_access_token,
