@@ -115,22 +115,14 @@ function addTracksToPlaylist(playlist_name, tracks)
 		        	'Content-Type': 'application/json'
 		    	},
 		    	success: function(r) {
-		        // if (start + maxTracksPerPlaylistAdd >= tracks.length) {
-		        //     callback('good');
-		        // } else {
-		        //     status(Math.round(100 * start / tracks.length)  + "% saved");
-		        //     addTracksToPlaylist(username, playlist, tracks,
-		        //     start + maxTracksPerPlaylistAdd, callback);
-		        // }
-		        //console.log(playlist_uri)
 		        resolve(playlist_uri)	
 		    	},
 		    	error: function(r, status, err) {
-		    	//callback(null);
-		    	//console.log(status)
-		    	//console.log(playlist_uri)
-                console.log('PROBLEM')
-		    	resolve(playlist_uri)
+
+                console.log('err')
+                console.log('status')
+                reject()
+		    	// resolve(playlist_uri)
 		    	}
 			});
     	})
