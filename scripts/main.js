@@ -100,7 +100,7 @@ function generatePlaylist(wrds,language_code, leeway) //enter URI which has trac
 {
 	words = new Array()
 	lyricWords = new Array()
-	console.log(typeof(language.value[0]))
+	// console.log(typeof(language.value[0]))
 	lan = language.value[0]
 	stpWords = stopwords[(language.value[0]).toLowerCase()]
 	// console.log(stopwords)
@@ -143,7 +143,7 @@ function generatePlaylist(wrds,language_code, leeway) //enter URI which has trac
 	//http://api.musixmatch.com/ws/1.1/track.search?apikey=b463ed1270b71853d56be5bd776a9b4a&f_lyrics_language=it&s_track_rating=desc
 	// document.getElementById("progress").style.display = "inline-block"
 	// $("#status").text("Searching musixmatch for songs with words in your vocabulary. You have " + wrds.length() + " words in your vocabulary")
-	$("#status").text("Searching tracks with words in your Duolingo vocabulary.")
+	$("#status").text("Your 'current language' on Duolingo is " + language.value[0] + ". Searching tracks with words in your Duolingo vocabulary.")
 	return new Promise(function(resolve,reject)
 	{
 		Promise.all( url_list.map(getJSON)).then(function(responses)
@@ -264,7 +264,7 @@ function getUsernameAndLanguage()
 			resolve(language)
 			// document.getElementById("genreHolder").style.display = "inline-block"
 			// document.getElementById("makePlaylist").style.display = "inline-block"
-			$("#status").text("Your 'current language' on Duolingo is " + language['value'] + ". Please select a genre (or multiple genres with ctrl/cmd) and press ''Make Playlist''")
+			// $("#status").text("Your 'current language' on Duolingo is " + language['value'] + ". Please select a genre (or multiple genres with ctrl/cmd) and press ''Make Playlist''")
 			// document.getElementById("progress").style.display = "none"
 		})
 	})
