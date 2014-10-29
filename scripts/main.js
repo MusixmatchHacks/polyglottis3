@@ -44,7 +44,7 @@ var musicbrainz_base = 'http://musicbrainz.org/ws/2/recording/?query=isrc:'
 var spotify_auth_base = 'https://accounts.spotify.com/authorize'
 var spotify_client_ID = '14fb55b1df36454793caa07ab8abefe6'
 var spotify_client_secret = 'cf72548f86e8493d8aa38cc881a63ee4'
-var duolingoAPI_base = 'http://ec2-54-77-238-210.eu-west-1.compute.amazonaws.com/duolingoHack/v1.0/'
+var duolingoAPI_base = 'http://ec2-23-22-137-12.compute-1.amazonaws.com/duolingoHack/v1.0/'
 
 var have_valid_playlist = false
 var username = ''
